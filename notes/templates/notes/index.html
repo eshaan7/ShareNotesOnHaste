@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>ShareNotesOnHaste</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static 'notes/styles.css' %}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+        <script src="{% static 'notes/index.js' %}"></script>
+    </head>
+    <body>
+        <div id="container">
+            <form action="{% url 'index' %}" method="POST">
+                {% csrf_token %}
+                <textarea id="new-note" name="note" rows="5" draggable="false" placeholder="Enter Note..."></textarea>
+                <button class="btn btn-dark" id="submit">Add note</button>
+            </form>
+            {% for n in notes %}
+                <div data-id="{{ forloop.counter }}">
+                    <p contenteditable="true">{{ n }}</p>
+                    <a href="{% url 'delNote' forloop.counter %}" onclick="javascript:this.parentElement.remove();" class="close">
+                    {% csrf_token %}
+                    x
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+    </body>
+</html>

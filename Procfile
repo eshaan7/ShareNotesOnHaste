@@ -1,0 +1,1 @@
+web: gunicorn ShareNotesOnHaste.wsgi --log-file -
