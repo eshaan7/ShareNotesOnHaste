@@ -4,5 +4,5 @@ from . import views
 
 urlpatterns = [
     path("", views.index, name="index"),
-    path("<int:index>/delete", views.delNote, name="delNote")
+    path("<str:note_to_delete>/delete", views.delNote, name="delNote")
 ]

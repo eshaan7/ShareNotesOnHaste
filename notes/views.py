@@ -13,9 +13,9 @@ def index(request):
     context = { "notes": Notes.objects.all() }
     return render(request, 'notes/index.html', context)
 
-def delNote(request, index):
+def delNote(request, note_to_delete):
 	try:
-		Notes.objects.get(pk=index).delete()
+		Notes.objects.get(note=note_to_delete).delete()
 	except DoesNotExist:
 		raise Http404("does not exist")
 	context = { "notes": Notes.objects.all() }
