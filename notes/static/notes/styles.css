@@ -5,7 +5,7 @@
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
 
-#container > div {
+.note-grid {
     background-color: #343a40 !important;
     font-size: 15px;
     margin: 15px;
@@ -20,7 +20,7 @@
 
 }
 
-#container > div:hover {
+.note-grid:hover {
     background-color: #343a40 !important;
     font-size: 23px;
     margin: 10px;
@@ -50,31 +50,26 @@ textarea, textarea:focus {
     resize: none;
 }
 
-a, .close {
-  font-family: sans-serif;
-  position: absolute;
-  right: 8px;
-  top: 3px;
-  width: 10px;
-  height: 10px;
-  opacity: 0.3;
-  color: white;
+.note-grid > p {
+  border: none;
+  padding: 0px;
+  border-top: 0.5px solid white;
 }
 
-.close:hover {
-  opacity: 1;
-}
-.close:before, .close:after {
+a:link, a:visited {
   position: absolute;
-  left: 15px;
-  content: ' ';
-  height: 33px;
-  width: 2px;
+  text-decoration: none;
+  background-color: #343a40 !important;
   color: white;
+  text-align: center;
+  display: inline-block;
+  right: 1px;
+  top: 0px;
+  font-size: 15px;
 }
-.close:before {
-  transform: rotate(45deg);
+
+a:hover, a:active {
+  text-decoration: none !important;
+  color: white !important;
 }
-.close:after {
-  transform: rotate(-45deg);
-}
+

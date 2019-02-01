@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, Http404
 from .models import Notes
 from django.views.decorators.csrf import csrf_protect
+
 # Create your views here.
 
 @csrf_protect

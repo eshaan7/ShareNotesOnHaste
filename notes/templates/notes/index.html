@@ -16,15 +16,13 @@
                 <textarea id="new-note" name="note" rows="5" draggable="false" placeholder="Enter Note..."></textarea>
                 <button class="btn btn-dark" id="submit">Add note</button>
             </form>
-            {% for n in notes %}
-                <div class="note-grid">
-                    <p contenteditable="true">{{ n }}</p>
-                    <a href="{% url 'delNote' n.id %}" onclick="javascript:this.parentElement.remove();" class="close">
-                    {% csrf_token %}
-                    x
-                    </a>
-                </div>
-            {% endfor %}
+        {% for n in notes %}
+            <div class="note-grid">
+                <a href="{% url 'delNote' n.id %}" onclick="javascript:this.parentElement.remove();">&#x2717;</a>
+                <br>
+                <p>{{ n }}</p>
+            </div>
+        {% endfor %}
         </div>
     </body>
 </html>
