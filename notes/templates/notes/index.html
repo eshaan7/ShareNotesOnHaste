@@ -7,10 +7,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{% static 'notes/styles.css' %}"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+		<!-- Font Awesome -->
+		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+		<!-- Material Design Bootstrap -->
         <script src="{% static 'notes/index.js' %}"></script>
     </head>
     <body>
-        <div id="container">
+        <div id="body-container">
             <form action="{% url 'index' %}" method="POST">
                 {% csrf_token %}
                 <textarea id="new-note" name="note" rows="5" draggable="false" placeholder="Enter Note..."></textarea>
@@ -18,10 +21,34 @@
             </form>
         {% for n in notes %}
             <div class="note-grid">
-                <a href="{% url 'delNote' n.id %}" onclick="javascript:this.parentElement.remove();">&#x2717;</a>
+                <a href="{% url 'delNote' n.id %}" class="delx" onclick="javascript:this.parentElement.remove();">&#x2717;</a>
                 <p>{{ n }}</p>
             </div>
         {% endfor %}
         </div>
     </body>
+    <!-- Footer -->
+	<footer>
+    <!-- Footer Elements -->
+    	<div id="footer-container">
+		    <!-- Twitter -->
+		    <a href="https://twitter.com/scriptnotsokid">
+		      <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+		    </a>
+		    <!-- Github -->
+		    <a href="https://github.com/Eshaan7">
+		      <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+		    </a>
+		    <!--Linkedin -->
+		    <a href="https://www.linkedin.com/in/eshaan-bansal-6a8287164">
+		      <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+		    </a>
+		    <!--Instagram-->
+		    <a href="https://instagram.com/maskofmydisguise">
+		      <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+		    </a>
+		</div>
+    <!-- Footer Elements -->
+  	</footer>
+  <!-- Footer -->
 </html>

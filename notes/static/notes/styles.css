@@ -1,30 +1,38 @@
 
-#container {
+#body-container {
     display: flex;
     flex-wrap: wrap;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
 }
 
-.note-grid {
+.note-grid, .note-grid:hover {
     background-color: #343a40 !important;
     font-size: 15px;
     margin: 15px;
-    padding: 10px 10px 55px 10px;
-    width: 200px;
+    padding: 10px;
+    width: 210px;
     height: 200px;
     position: relative; 
+    word-wrap: break-word;
+    overflow: hidden;
+    text-align: justify;
+    z-index: 2;
+
 }
 
+/*
+
 .note-grid:hover {
-    background-color: #343a40 !important;
     font-size: 23px;
     margin: 5px;
-    border: 1px solid black;
     padding: 10px;
-    width: 300px;
+    width: 450px;
     height: auto;
     overflow: visible;
+    z-index: 1;
 }
+
+*/
 
 form {
     background-color: #f8f9fa !important;
@@ -49,15 +57,13 @@ p {
   top: -8px;
   border-top: 0.5px solid white !important;
   padding-top: 5px;
-  word-wrap: break-word;
-  overflow: hidden;
-  text-align: justify; 
   color: rgb(255, 255, 255);
   position: relative;
   display: block;
+  clear: both;
 }
 
-a:link, a:visited {
+.delx:link, .delx:visited {
   position: relative;
   text-align: right;
   text-decoration: none;
@@ -69,8 +75,28 @@ a:link, a:visited {
   font-size: 15px;
 }
 
-a:hover, a:active {
+.delx:hover, .delx:active {
   text-decoration: none !important;
   color: white !important;
+  font-weight: bold;
 }
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0 !important;
+  width: 100%;
+  height: 10%;
+  padding: 20px;
+  background-color: black !important;
+  color: white !important;
+  text-align: center;
+  font-size: 0.7rem;
+  clear: both;
+}
+
+i {
+  color: white;
+}
+
 

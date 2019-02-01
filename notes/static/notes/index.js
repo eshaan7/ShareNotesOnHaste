@@ -11,5 +11,5 @@ document.addEventListener('DOMContentLoaded', () => {
         document.querySelector('#submit').disabled = true;
     };
 
-    document.querySelector('a').addEventListener("mouseover", () => { document.querySelector('a').innerHTML = "\u{2718}";}); 
+    //document.querySelector('a').addEventListener("mouseover", () => { document.querySelector('a').innerHTML = "\u{2718}";}); 
 });
