@@ -9,21 +9,16 @@
     background-color: #343a40 !important;
     font-size: 15px;
     margin: 15px;
-    padding: 10px 10px 45px 10px;
+    padding: 10px 10px 55px 10px;
     width: 200px;
     height: 200px;
-    word-wrap: break-word;
-    overflow: hidden;
-    text-align: justify; 
-    color: rgb(255, 255, 255);
     position: relative; 
-
 }
 
 .note-grid:hover {
     background-color: #343a40 !important;
     font-size: 23px;
-    margin: 10px;
+    margin: 5px;
     border: 1px solid black;
     padding: 10px;
     width: 300px;
@@ -50,21 +45,27 @@ textarea, textarea:focus {
     resize: none;
 }
 
-.note-grid > p {
-  border: none;
-  padding: 0px;
-  border-top: 0.5px solid white;
+p {
+  top: -8px;
+  border-top: 0.5px solid white !important;
+  padding-top: 5px;
+  word-wrap: break-word;
+  overflow: hidden;
+  text-align: justify; 
+  color: rgb(255, 255, 255);
+  position: relative;
+  display: block;
 }
 
 a:link, a:visited {
-  position: absolute;
+  position: relative;
+  text-align: right;
   text-decoration: none;
   background-color: #343a40 !important;
   color: white;
-  text-align: center;
-  display: inline-block;
-  right: 1px;
-  top: 0px;
+  display: block;
+  right: -9px;
+  top: -9px;
   font-size: 15px;
 }
 
