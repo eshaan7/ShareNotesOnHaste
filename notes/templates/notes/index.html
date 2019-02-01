@@ -17,9 +17,9 @@
                 <button class="btn btn-dark" id="submit">Add note</button>
             </form>
             {% for n in notes %}
-                <div data-id="{{ forloop.counter }}">
+                <div class="note-grid">
                     <p contenteditable="true">{{ n }}</p>
-                    <a href="{% url 'delNote' n %}" onclick="javascript:this.parentElement.remove();" class="close">
+                    <a href="{% url 'delNote' n.id %}" onclick="javascript:this.parentElement.remove();" class="close">
                     {% csrf_token %}
                     x
                     </a>
