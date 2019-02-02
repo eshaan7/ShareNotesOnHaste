@@ -21,4 +21,3 @@ def delNote(request, note_to_delete):
 		raise Http404("does not exist")
 	context = { "notes": Notes.objects.all()[::-1] }
 	return render(request, 'notes/index.html', context)
-

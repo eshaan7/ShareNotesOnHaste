@@ -21,7 +21,11 @@
             </form>
         {% for n in notes %}
             <div class="note-grid">
-                <a href="{% url 'delNote' n.id %}" class="delx" onclick="javascript:this.parentElement.remove();">&#x2717;</a>
+            	<div class="btn-group btn-group-sm" role="group">
+					  <a href="#" class="btn btn-reply"><i class="fas fa-reply"></i></a>
+					  <a href="#" class="btn btn-edit"><i class="fas fa-pen"></i></a>
+					  <a href="{% url 'delNote' n.id %}" class="btn btn-close" onclick="javascript:this.parentElement.parentElement.remove();"><i class="fas fa-trash-alt"></i></a>
+				</div>
                 <p>{{ n }}</p>
             </div>
         {% endfor %}
