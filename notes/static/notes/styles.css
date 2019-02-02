@@ -128,9 +128,10 @@ footer i {
   }
 
   footer {
-    height: 5vh;
+    height: 20vh;
+    padding-bottom: 30px !important;
   }
-  
+
   .note-grid, .note-grid:hover, .input-form {
     width: 28% !important;
     height: 17vh !important;
