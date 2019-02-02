@@ -39,7 +39,6 @@
     width: 18%;
     height: 33vh;
     position: relative; 
-    word-wrap: break-word;
     overflow: hidden;
     text-align: justify;
 } 
@@ -60,12 +59,13 @@
 */
 
 .note-grid p {
+  white-space: pre-wrap;
+  word-wrap: break-word;
   border-top: 0.5px solid white !important;
   padding-top: 3px;
   color: rgb(255, 255, 255);
   position: relative;
   display: block;
-  white-space: pre;
   clear: both;
 }
 
