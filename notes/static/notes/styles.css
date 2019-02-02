@@ -122,8 +122,8 @@ footer i {
 @media only screen and (max-width: 900px) {
 
   .note-grid, .note-grid:hover, .input-form {
-    width: 28% !important;
-    height: 8vh !important;
+    width: 27% !important;
+    height: 13vh !important;
   }
 
   .note-grid p {
@@ -133,7 +133,7 @@ footer i {
   .input-form textarea, textarea:focus {
     position: relative;
     font-size: 13px !important;
-    height: 3vh !important;
+    height: 4vh !important;
   } 
 
   .btn-group {
@@ -143,15 +143,15 @@ footer i {
   button.submit {
     position: relative;
     height: 2vh !important;
-    font-size: 12px !important;
+    font-size: 11px !important;
     clear: both;
-    margin-top: -1.5vh;
+    margin-top: -1.0vh;
     text-align: center;
     padding: 0.5vh 1.5vw 3.5vh 1.5vw !important;
   }
 
   a.btn {    
-    font-size: 7px !important;
+    font-size: 5px !important;
     height: 1vh !important;
     border: 0.4px solid lightgrey !important;
   }
