@@ -124,13 +124,13 @@ footer i {
 @media only screen and (max-width: 900px) {
 
   #body-container {
-    height: 5vh;
     min-height: 80vh !important;
   }
 
   footer {
-    padding-bottom: 40px !important;
+    height: 5vh;
   }
+  
   .note-grid, .note-grid:hover, .input-form {
     width: 28% !important;
     height: 17vh !important;
