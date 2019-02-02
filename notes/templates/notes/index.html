@@ -26,10 +26,11 @@
         {% for n in notes %}
             <div class="note-grid">
             	<div class="btn-group btn-group-sm" role="group">
-					  <a onclick="javascript:alert('Reply: Coming soon');" class="btn btn-reply"><i class="fas fa-reply"></i></a>
-					  <!-- <a class="btn btn-edit" onclick="editNote(this)"><i class="fas fa-pen"></i></a> -->
-					  <a onclick="javascript:alert('Edit: Coming soon');" class="btn btn-edit"><i class="fas fa-pen"></i></a> 
-					  <a href="{% url 'delNote' n.id %}" class="btn btn-close" onclick="javascript:this.parentElement.parentElement.remove();"><i class="fas fa-trash-alt"></i></a>
+            		<a onclick="alert('expand: Coming soon');" class="btn btn-expand"><i class="fas fa-expand-arrows-alt"></i>
+					<a onclick="javascript:alert('Reply: Coming soon');" class="btn btn-reply"><i class="fas fa-reply"></i></a>
+					<!-- <a class="btn btn-edit" onclick="editNote(this)"><i class="fas fa-pen"></i></a> -->
+					<a onclick="javascript:alert('Edit: Coming soon');" class="btn btn-edit"><i class="fas fa-pen"></i></a> 
+					<a href="{% url 'delNote' n.id %}" class="btn btn-close" onclick="javascript:this.parentElement.parentElement.remove();"><i class="fas fa-trash-alt"></i></a>
 				</div>
                 <p>{{ n }}</p>
             </div>
