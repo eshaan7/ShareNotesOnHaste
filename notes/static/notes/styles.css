@@ -124,8 +124,8 @@ footer i {
   .note-grid, .note-grid:hover, .input-form {
     width: 28% !important;
     height: 15vh !important;
-    margin: 7px;
-    padding: 13px;
+    margin: 0px;
+    padding: 8px;
   }
 
   .note-grid p {
