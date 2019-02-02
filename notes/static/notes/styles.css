@@ -124,8 +124,8 @@ footer i {
   .note-grid, .note-grid:hover, .input-form {
     width: 28% !important;
     height: 15vh !important;
-    margin: 0px;
-    padding: 8px;
+    margin: 5px;
+    padding: 7px;
   }
 
   .note-grid p {
@@ -139,17 +139,17 @@ footer i {
   } 
 
   .btn-group {
-    margin: -1vh -0.5vw -0.5vh 0vw;
+    margin: -0.5vh -1.5vw -0.5vh 0vw;
   }
 
   button.submit {
     position: relative;
-    height: 1vh !important;
+    height: 0.5vh !important;
     font-size: 10px !important;
     clear: both;
     margin-top: -0.5vh;
     text-align: center;
-    padding: 0.5vh 1.5vw 3.5vh 1.5vw !important;
+    padding: 0.5vh 1.5vw 3.0vh 1.5vw !important;
   }
 
   a.btn {    
