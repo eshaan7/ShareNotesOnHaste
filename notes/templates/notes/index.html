@@ -5,25 +5,30 @@
     <head>
         <title>ShareNotesOnHaste</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Static files -->
         <link rel="stylesheet" type="text/css" href="{% static 'notes/styles.css' %}"/>
+        <script src="{% static 'notes/index.js' %}"></script>
         <!-- Bootstrap -->
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 		<!-- Font Awesome -->
 		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
-        <script src="{% static 'notes/index.js' %}"></script>
     </head>
+    <!-- Body -->
     <body>
         <div id="body-container">
-            <form action="{% url 'index' %}" method="POST">
-                {% csrf_token %}
-                <textarea id="new-note" name="note" draggable="false" placeholder="Enter Note..."></textarea>
-                <button class="btn btn-dark" id="submit">Add note</button>
-            </form>
+        	<div class="input-form">
+	            <form action="{% url 'index' %}" method="POST">
+	                {% csrf_token %}
+	                <textarea id="new-note" name="note" draggable="false" placeholder="Enter Note..."></textarea>
+	                <button class="btn btn-dark submit">Add note</button>
+	            </form>
+        	</div>
         {% for n in notes %}
             <div class="note-grid">
             	<div class="btn-group btn-group-sm" role="group">
-					  <a href="#" class="btn btn-reply"><i class="fas fa-reply"></i></a>
-					  <a href="#" class="btn btn-edit"><i class="fas fa-pen"></i></a>
+					  <a onclick="javascript:alert('Reply: Coming soon');" class="btn btn-reply"><i class="fas fa-reply"></i></a>
+					  <!-- <a class="btn btn-edit" onclick="editNote(this)"><i class="fas fa-pen"></i></a> -->
+					  <a onclick="javascript:alert('Edit: Coming soon');" class="btn btn-edit"><i class="fas fa-pen"></i></a> 
 					  <a href="{% url 'delNote' n.id %}" class="btn btn-close" onclick="javascript:this.parentElement.parentElement.remove();"><i class="fas fa-trash-alt"></i></a>
 				</div>
                 <p>{{ n }}</p>
@@ -31,6 +36,7 @@
         {% endfor %}
         </div>
     </body>
+    <!-- /Body -->
     <!-- Footer -->
 	<footer>
     <!-- Footer Elements -->
@@ -52,7 +58,7 @@
 		      <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 		    </a>
 		</div>
-    <!-- Footer Elements -->
+    <!-- /Footer Elements -->
   	</footer>
-  <!-- Footer -->
+  <!-- /Footer -->
 </html>

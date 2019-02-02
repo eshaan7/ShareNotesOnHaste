@@ -10,6 +10,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('form').onsubmit = () => {
         document.querySelector('#submit').disabled = true;
     };
-
-    //document.querySelector('a').addEventListener("mouseover", () => { document.querySelector('a').innerHTML = "\u{2718}";}); 
 });
+
+function editNote(btn) {
+    divEl = btn.parentElement.parentElement;
+    divEl.innerHTML = "";
+    //divEl.className = "input-form";
+    var form = document.createElement('form');
+    form.setAttribute("method", "post");
+    form.setAttribute("action", "{% url 'index' %}");
+    form.innerHTML = '{% csrf_token %}<textarea id="new-note" name="note" draggable="false" placeholder="Enter Note..."></textarea><button class="btn btn-dark" class="submitbtn">Edit note</button>';
+    divEl.appendChild(form);
+}
