@@ -26,13 +26,13 @@ body {
 @media only screen and (max-width: 600px) {
 
   .note-grid, .note-grid:hover, form {
-    width: 25% !important;
-    height: 20vh !important;
-    font-size: 10px !important;
+    width: 30% !important;
+    height: 23vh !important;
+    font-size: 11px !important;
   }
 
   textarea, textarea:focus {
-    font-size: 14px !important;
+    font-size: 13px !important;
   } 
 
   button {
