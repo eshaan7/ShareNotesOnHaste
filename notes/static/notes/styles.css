@@ -28,7 +28,7 @@ body {
   .note-grid, .note-grid:hover, form {
     width: 25% !important;
     height: 20vh !important;
-    font-size: 15px !important;
+    font-size: 10px !important;
   }
 
   textarea, textarea:focus {
