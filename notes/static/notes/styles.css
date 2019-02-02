@@ -15,15 +15,32 @@ body {
     margin: 12px;
     padding: 10px;
     width: 18%;
-    height: 200px;
+    height: 33vh;
     position: relative; 
     word-wrap: break-word;
     overflow: hidden;
     text-align: justify;
-    z-index: 1;
+} 
 
+/* for mobile phones */
+@media only screen and (max-width: 600px) {
+
+  .note-grid, .note-grid:hover, form {
+    width: 25% !important;
+    height: 30vh !important;
+  }
+
+  textarea, textarea:focus {
+    font-size: 14px !important;
+  } 
+
+  button {
+    height: 30% !important;
+    font-size: 13px !important;
+    clear: both;
+    padding: 3px 3px 5px 3px !important;
+  }
 }
-
 /*
 .note-grid:hover {
     font-size: 23px;
@@ -40,7 +57,7 @@ body {
 form {
     background-color: #f8f9fa !important;
     width: 18%;
-    height: 199px;
+    height: 33vh;
     margin: 12px;
     padding: 15px;
     overflow: hidden;
@@ -52,6 +69,7 @@ textarea, textarea:focus {
     background-color: #f8f9fa !important;
     outline: 0;
     width: 90%;
+    height: 75%;
     border-bottom: 2px solid black;
     resize: none;
 }

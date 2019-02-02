@@ -16,7 +16,7 @@
         <div id="body-container">
             <form action="{% url 'index' %}" method="POST">
                 {% csrf_token %}
-                <textarea id="new-note" name="note" rows="5" draggable="false" placeholder="Enter Note..."></textarea>
+                <textarea id="new-note" name="note" draggable="false" placeholder="Enter Note..."></textarea>
                 <button class="btn btn-dark" id="submit">Add note</button>
             </form>
         {% for n in notes %}
