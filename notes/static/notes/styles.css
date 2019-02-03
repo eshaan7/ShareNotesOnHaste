@@ -174,7 +174,7 @@ footer i {
   }
 
   footer {
-    height: 20vh;
+    height: 10vh;
     padding-top: 40px;
   }
 
@@ -186,7 +186,7 @@ footer i {
   }
 
   .note-grid p {
-    top: -1.2vh;
+    top: -0.5vh;
     font-size: 9px !important;
   }
 
@@ -201,7 +201,7 @@ footer i {
     height: 1vh !important;
     font-size: 10px !important;
     clear: both;
-    margin-top: -2vh;
+    margin-top: -1.5vh;
     text-align: center;
     padding: 0.5vh 2vw 3.0vh 2vw !important;
   }
@@ -211,7 +211,7 @@ footer i {
   }
 
   a.btn {
-    padding: 0.3vh 0.5vw 1.5vh 0.5vw !important;    
+    padding: 0.3vh 0.5vw 1.0vh 0.5vw !important;    
     font-size: 5px !important;
     height: 1.5vh !important;
     border: 0.4px solid lightgrey !important;
