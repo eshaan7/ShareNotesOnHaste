@@ -22,3 +22,11 @@ function editNote(btn) {
     form.innerHTML = '{% csrf_token %}<textarea id="new-note" name="note" draggable="false" placeholder="Enter Note..."></textarea><button class="btn btn-dark" class="submitbtn">Edit note</button>';
     divEl.appendChild(form);
 }
+
+// If hide button is clicked, delete the notification/header.
+function removeHeader(btn) {
+    btn.parentElement.style.animationPlayState = 'running';
+    btn.parentElement.addEventListener('animationend', () =>  {
+        btn.parentElement.remove();
+    });
+}

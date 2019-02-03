@@ -15,6 +15,12 @@
     </head>
     <!-- Body -->
     <body>
+    {% if message %}
+    	<header>
+    		<i class="far fa-bell"> {{ message }}</i>
+    		<a class="fas fa-times-circle fa-sm" onclick="removeHeader(this);"></a>
+    	</header>
+    {% endif %}
         <div id="body-container">
         	<div class="input-form">
 	            <form action="{% url 'index' %}" method="POST">
@@ -36,30 +42,30 @@
             </div>
         {% endfor %}
         </div>
+        <!-- Footer -->
+		<footer>
+			<!-- Footer Elements -->
+			<div id="footer-container">
+			    <!-- Twitter -->
+			    <a href="https://twitter.com/scriptnotsokid">
+			      <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+			    </a>
+			    <!-- Github -->
+			    <a href="https://github.com/Eshaan7">
+			      <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+			    </a>
+			    <!--Linkedin -->
+			    <a href="https://www.linkedin.com/in/eshaan-bansal-6a8287164">
+			      <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+			    </a>
+			    <!--Instagram-->
+			    <a href="https://instagram.com/maskofmydisguise">
+			      <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
+			    </a>
+			</div>
+			<!-- /Footer Elements -->
+		</footer>
+		<!-- /Footer -->
     </body>
     <!-- /Body -->
-    <!-- Footer -->
-	<footer>
-    <!-- Footer Elements -->
-    	<div id="footer-container">
-		    <!-- Twitter -->
-		    <a href="https://twitter.com/scriptnotsokid">
-		      <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-		    </a>
-		    <!-- Github -->
-		    <a href="https://github.com/Eshaan7">
-		      <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-		    </a>
-		    <!--Linkedin -->
-		    <a href="https://www.linkedin.com/in/eshaan-bansal-6a8287164">
-		      <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-		    </a>
-		    <!--Instagram-->
-		    <a href="https://instagram.com/maskofmydisguise">
-		      <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-		    </a>
-		</div>
-    <!-- /Footer Elements -->
-  	</footer>
-  <!-- /Footer -->
 </html>

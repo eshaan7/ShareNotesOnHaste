@@ -8,10 +8,12 @@ from django.views.decorators.csrf import csrf_protect
 @csrf_protect
 def index(request):
     n = request.POST.get('note', False)
+    msg = ""
     if n:
         note_obj = Notes(note=n)
         note_obj.save()
-    context = { "notes": Notes.objects.all()[::-1] }
+       	msg = "Note added"
+    context = { "notes": Notes.objects.all()[::-1], "message": msg }
     return render(request, 'notes/index.html', context)
 
 def delNote(request, note_to_delete):
@@ -19,5 +21,5 @@ def delNote(request, note_to_delete):
 		Notes.objects.get(id=note_to_delete).delete()
 	except Nptes.DoesNotExist:
 		raise Http404("does not exist")
-	context = { "notes": Notes.objects.all()[::-1] }
+	context = { "notes": Notes.objects.all()[::-1], "message": "Note deleted" }
 	return render(request, 'notes/index.html', context)
