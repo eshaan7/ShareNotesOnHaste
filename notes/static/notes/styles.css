@@ -128,7 +128,7 @@ header a:hover {
 
 a.btn {
     font-size: 10px !important;
-    padding: 0.3vh 0vw 1vh 0vw !important;
+    padding: 0.3vh 0vw 2vh 0vw !important;
     background-color: #343a40 !important;
     border: 0.7px solid white !important;
     color: white !important;
@@ -175,44 +175,45 @@ footer i {
 
   footer {
     height: 20vh;
-    padding-top: 35px;
+    padding-top: 40px;
   }
 
   .note-grid, .note-grid:hover, .input-form {
-    width: 28% !important;
+    width: 29% !important;
     height: 17vh !important;
     margin: 5px;
     padding: 7px;
   }
 
   .note-grid p {
-
+    top: -1.2vh;
     font-size: 9px !important;
   }
 
   .input-form textarea, textarea:focus {
     position: relative;
     font-size: 11px !important;
-    height: 8vh !important;
+    height: 10vh !important;
   } 
 
   button.submit {
     position: relative;
-    height: 0.2vh !important;
-    font-size: 9px !important;
+    height: 1vh !important;
+    font-size: 10px !important;
     clear: both;
-    margin-top: -0.5vh;
+    margin-top: -2vh;
     text-align: center;
-    padding: 0.5vh 1.5vw 3.0vh 1.5vw !important;
+    padding: 0.5vh 2vw 3.0vh 2vw !important;
   }
 
   .btn-group {
-    margin: -0.7vh -1.2vw -1.0vh 0vw;
+    margin: -0.7vh -0.5vw 0vh 65% !important;
   }
 
-  a.btn {    
+  a.btn {
+    padding: 0.3vh 0.5vw 1.5vh 0.5vw !important;    
     font-size: 5px !important;
-    height: 1vh !important;
+    height: 1.5vh !important;
     border: 0.4px solid lightgrey !important;
   }
 }
