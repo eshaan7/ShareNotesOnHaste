@@ -1,0 +1,14 @@
+{% extends 'notes/base.html' %}
+{% block title %} DELETE {% endblock %}
+
+{% block main %}
+<div class="container" style="margin-top: 60px; margin-bottom:60px">
+    <form method="post">{% csrf_token %}
+    <p>Are you sure you want to delete "{{ object }}"?</p>
+        <input type="submit" value="Confirm"><a href="{% url 'index' %}">Cancel</a>
+</form>
+
+
+</div>
+
+{%endblock%}

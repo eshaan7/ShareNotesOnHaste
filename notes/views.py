@@ -1,23 +1,31 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseRedirect, Http404
-from .models import Notes
+from django.urls import reverse_lazy
 from django.views.decorators.csrf import csrf_protect
 
-# Create your views here.
+### IMPORT DJANGO CREATE/UPDATE/DELETE VIEWS ###
+from django.views.generic.list import ListView
+from django.views.generic.edit import CreateView
+from django.views.generic.edit import UpdateView
+from django.views.generic.edit import DeleteView
 
-@csrf_protect
-def index(request):
-    n = request.POST.get('note', False)
-    if n:
-        note_obj = Notes(note=n)
-        note_obj.save()
-    context = { "notes": Notes.objects.all()[::-1] }
-    return render(request, 'notes/index.html', context)
 
-def delNote(request, note_to_delete):
-	try:
-		Notes.objects.get(id=note_to_delete).delete()
-	except Nptes.DoesNotExist:
-		raise Http404("does not exist")
-	context = { "notes": Notes.objects.all()[::-1] }
-	return render(request, 'notes/index.html', context)
+## IMPORT FILES ON APPLICATIONS
+from .models import Notes
+
+# START VIEWS #
+class Index(ListView):
+    model = Notes
+    template_name = 'notes/index.html'
+
+
+class NewNote(CreateView):
+    model = Notes
+    fields = '__all__'
+    template_name = 'notes/index.html'
+    success_url = reverse_lazy('index')
+
+class DeleteNote(DeleteView):
+    model = Notes
+    template_name = 'notes/delete.html'
+    success_url = reverse_lazy('index')
