@@ -19,8 +19,8 @@ body {
     height: 100%;
   }
   50% {
-    opacity: 0.8;
-    height: 70%;
+    opacity: 1;
+    height: 60%;
   }
   75% {
     opacity: 0.7;
@@ -170,17 +170,17 @@ footer i {
 @media only screen and (max-width: 900px) {
 
   #body-container {
-    min-height: 80vh !important;
+    min-height: 90vh !important;
   }
 
   footer {
     height: 10vh;
-    padding-top: 40px;
+    padding-top: 30px;
   }
 
   .note-grid, .note-grid:hover, .input-form {
     width: 29% !important;
-    height: 17vh !important;
+    height: 20vh !important;
     margin: 5px;
     padding: 7px;
   }
