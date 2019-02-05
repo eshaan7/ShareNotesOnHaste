@@ -29,3 +29,9 @@ class DeleteNote(DeleteView):
     model = Notes
     template_name = 'notes/delete.html'
     success_url = reverse_lazy('index')
+
+class EditNote(UpdateView):
+    model = Notes
+    fields = ['note']
+    template_name = 'notes/edit.html'
+    success_url = reverse_lazy('index')

@@ -2,25 +2,38 @@
 {% block title %} ShareNotesOnHaste {% endblock %}
 
 {% block main %}
-        <div id="body-container">
-        	<div class="input-form">
-	            <form action="{% url 'SaveNote' %}" method="POST">
-	                {% csrf_token %}
-	                <textarea id="new-note" wrap="hard" name="note" draggable="false" placeholder="Enter Note..."></textarea>
-	                <button class="btn btn-dark submit" type="submit">Add note</button>
-	            </form>
-        	</div>
-        {% for Notes in object_list %}
-            <div class="note-grid">
-            	<div class="btn-group btn-group-sm" role="group">
-            		<a onclick="alert('expand: Coming soon');" class="btn btn-expand"><i class="fas fa-expand-arrows-alt"></i>
-					<a onclick="javascript:alert('Reply: Coming soon');" class="btn btn-reply"><i class="fas fa-reply"></i></a>
-					<!-- <a class="btn btn-edit" onclick="editNote(this)"><i class="fas fa-pen"></i></a> -->
-					<a onclick="javascript:alert('Edit: Coming soon');" class="btn btn-edit"><i class="fas fa-pen"></i></a> 
-					<a href="{% url 'DeleteNote' Notes.id %}" class="btn btn-close" onclick="javascript:this.parentElement.parentElement.remove();"><i class="fas fa-trash-alt"></i></a>
-				</div>
-                <p>{{ Notes }}</p>
+        <div class="container">
+            <div class="row">
+                {% for Notes in object_list %}
+                <div class="w-100 col-lg-4 col-md-6 col-sm-6" style="margin-top:20px">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-5 col-lg-4 col-md-5 col-sm-12">Date</div>
+                                <div class="col-6 text-right col-lg-8 col-md-7 col-sm-12">
+                                    <div class="row text-black-50 float-right">
+                                        <a href="{% url 'DeleteNote' Notes.id %}" class="btn btn-close"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="{% url 'EditNote' Notes.id %}" class="btn btn-edit"><i class="fas fa-pen"></i></a>
+                                        <a href="#" class="btn btn-reply"><i class="fas fa-reply"></i></a>
+                                        <a href="#" class="btn btn-expand">
+                                            <i class="fas fa-expand-arrows-alt"></i>
+                                            <!-- <a class="btn btn-edit" onclick="editNote(this)"><i class="fas fa-pen"></i></a> -->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ Notes }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
             </div>
-        {% endfor %}
         </div>
-{%endblock%}
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+{% endblock %}

@@ -1,47 +1,26 @@
 {% load static %}
-
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
         <title>{% block title %}{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Static files -->
-        <link rel="stylesheet" type="text/css" href="{% static 'notes/styles.css' %}"/>
-        <script src="{% static 'notes/index.js' %}"></script>
-        <!-- Bootstrap -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-		<!-- Font Awesome -->
-		<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     </head>
-    <!-- Body -->
     <body>
-{% block main %}
+    {% block main %}
 
-{% endblock %}
+    {% endblock %}
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+        <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+        <script src="{% static 'assets/js/popper.js' %}"></script>
+        <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+        <script type="text/javascript" src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
     </body>
-    <!-- /Body -->
-    <!-- Footer -->
-	<footer>
-    <!-- Footer Elements -->
-    	<div id="footer-container">
-		    <!-- Twitter -->
-		    <a href="https://twitter.com/scriptnotsokid">
-		      <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-		    </a>
-		    <!-- Github -->
-		    <a href="https://github.com/Eshaan7">
-		      <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-		    </a>
-		    <!--Linkedin -->
-		    <a href="https://www.linkedin.com/in/eshaan-bansal-6a8287164">
-		      <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-		    </a>
-		    <!--Instagram-->
-		    <a href="https://instagram.com/maskofmydisguise">
-		      <i class="fab fa-instagram fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
-		    </a>
-		</div>
-    <!-- /Footer Elements -->
-  	</footer>
-  <!-- /Footer -->
 </html>
