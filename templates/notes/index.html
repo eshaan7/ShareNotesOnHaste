@@ -1,0 +1,39 @@
+{% extends 'notes/base.html' %}
+{% block title %} ShareNotesOnHaste {% endblock %}
+
+{% block main %}
+        <div class="container">
+            <div class="row">
+                {% for Notes in object_list %}
+                <div class="w-100 col-lg-4 col-md-6 col-sm-6" style="margin-top:20px">
+                    <div class="card">
+                        <div class="card-header">
+                            <div class="row">
+                                <div class="col-5 col-lg-4 col-md-5 col-sm-12">Date</div>
+                                <div class="col-6 text-right col-lg-8 col-md-7 col-sm-12">
+                                    <div class="row text-black-50 float-right">
+                                        <a href="{% url 'DeleteNote' Notes.id %}" class="btn btn-close"><i class="fas fa-trash-alt"></i></a>
+                                        <a href="{% url 'EditNote' Notes.id %}" class="btn btn-edit"><i class="fas fa-pen"></i></a>
+                                        <a href="#" class="btn btn-reply"><i class="fas fa-reply"></i></a>
+                                        <a href="#" class="btn btn-expand">
+                                            <i class="fas fa-expand-arrows-alt"></i>
+                                            <!-- <a class="btn btn-edit" onclick="editNote(this)"><i class="fas fa-pen"></i></a> -->
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <blockquote class="blockquote mb-0">
+                                <p>{{ Notes }}</p>
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+{% endblock %}

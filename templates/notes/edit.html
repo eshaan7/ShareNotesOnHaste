@@ -1,0 +1,19 @@
+{% extends 'notes/base.html' %}
+{% block title %} ShareNotesOnHaste {% endblock %}
+
+{% block main %}
+        <div class="container">
+            <div class="card text-center" style="margin-top:30px;">
+                    <form method="post">{% csrf_token %}
+                <div class="card-body">
+                    <h5 class="card-title">You are editing the note ()</h5>
+                    <p class="card-text"><textarea name="note" cols="80" rows="5" required="" id="id_note">{{ object }}</textarea></p>
+                    <input type="submit" value="Update" class="btn btn-primary"> </input>
+                    <a href="{% url 'index' %}" class="btn btn-link">Cancel</a>
+                </div>
+            </div>
+        </div>
+        <!-- Bootstrap core JavaScript
+    ================================================== -->
+        <!-- Placed at the end of the document so the pages load faster -->
+{% endblock %}
