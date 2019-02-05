@@ -3,14 +3,17 @@
 ## New functions
 
   1. make footer static i.e. not overlapping
-  2. add edit functionality
-  3. add reply functionaity
+  2. add reply functionaity
   
+<b>NEW:</b> The function edit note is working.
+
 <b>NEW:</b> The function delete note is working.
 
 <b>EDIT:</b> Create a note make using CBV (Class Based Views) (Recommended)
 
 <b>EDIT:</b> Templates folder into root folder of application (Recommended)
+
+<b>EDIT:</b> Template of this fork i made changes. I changed the new template for based on bootstrap (i don't finished, but works)
 
 
 ## Install
