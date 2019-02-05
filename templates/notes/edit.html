@@ -7,7 +7,7 @@
                     <form method="post">{% csrf_token %}
                 <div class="card-body">
                     <h5 class="card-title">You are editing the note ()</h5>
-                    <p class="card-text"><textarea name="note" cols="40" rows="10" required="" id="id_note">{{ object }}</textarea></p>
+                    <p class="card-text"><textarea name="note" cols="80" rows="5" required="" id="id_note">{{ object }}</textarea></p>
                     <input type="submit" value="Update" class="btn btn-primary"> </input>
                     <a href="{% url 'index' %}" class="btn btn-link">Cancel</a>
                 </div>
