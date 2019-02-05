@@ -1,6 +1,6 @@
 # ShareNotesOnHaste
 
-### New functions
+## New functions
 
   1. make footer static i.e. not overlapping
   2. add edit functionality
@@ -13,11 +13,11 @@
 <b>EDIT:</b> Templates folder into root folder of application (Recommended)
 
 
-### Install
+## Install
 
 Made using [Django](https://www.djangoproject.com/) with [Python 3](https://www.python.org/).
 
-How to install on <b>LINUX/MAC</b>
+#### How to install on <b>LINUX/MAC</b>
 
 Requirements 
 ```sh
@@ -27,7 +27,7 @@ $ --- / --- / --- / ---- / ----
 (venv) $ pip install Django          # INSTALL DJANGO IN VENV
 ```
 
-How to install on <b>Windows</b>
+#### How to install on <b>Windows</b>
 
 Requirements 
 ```sh
@@ -52,5 +52,5 @@ Login in <b> disabled </b> <i>I don't configureted this</i>
 [127.0.0.1:8000/login](http://127.0.0.1:8000/login)
 
 ```
-If you use this project does not forget change the security key.
+Note: If you use this project do not forget to change the security key.
 ```
