@@ -18,11 +18,10 @@ class Index(ListView):
     model = Notes
     template_name = 'notes/index.html'
 
-
 class NewNote(CreateView):
     model = Notes
     fields = '__all__'
-    template_name = 'notes/index.html'
+    template_name = 'notes/add.html'
     success_url = reverse_lazy('index')
 
 class DeleteNote(DeleteView):
