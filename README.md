@@ -4,17 +4,8 @@
 
   1. make footer static i.e. not overlapping
   2. add reply functionaity
-  
-<b>NEW:</b> The function edit note is working.
-
-<b>NEW:</b> The function delete note is working.
-
-<b>EDIT:</b> Create a note make using CBV (Class Based Views) (Recommended)
-
-<b>EDIT:</b> Templates folder into root folder of application (Recommended)
-
-<b>EDIT:</b> Template of this fork i made changes. I changed the new template for based on bootstrap (i don't finished, but works)
-
+  3. add edit functionality
+  4. add expand func
 
 ## Install
 
@@ -49,8 +40,6 @@ Run project
 (venv) $ python manage.py createsuperuser
 (venv) $ python manage.py runserver
 ```
-
-Login in <b> disabled </b> <i>I don't configureted this</i>
 
 [127.0.0.1:8000/login](http://127.0.0.1:8000/login)
 
