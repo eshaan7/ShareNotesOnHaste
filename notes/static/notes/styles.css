@@ -1,219 +1,143 @@
-
 * {
-  margin: 0;
-  padding: 0;
+	margin: 0;
+	padding: 0;
 }
 
-body {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: auto auto 50px;
-  grid-template-areas: "hd"
-                       "main"
-                       "ft";
-}
+ /* HEADER */
 
 @keyframes hide {
-  0% {
-    opacity: 1;
-    height: 100%;
-  }
-  50% {
-    opacity: 1;
-    height: 60%;
-  }
-  75% {
-    opacity: 0.7;
-    height: 40%;
-  }
-  100% {
-    opacity: 0;
-    height: 0px;
-  }
+    0% {
+      opacity: 1;
+      height: 100%;
+    }
+    50% {
+      opacity: 0.8;
+      height: 70%;
+    }
+    75% {
+      opacity: 0.4;
+      height: 40%;
+    }
+    100% {
+      opacity: 0;
+      height: 0px;
+    }
+}
+  
+#main-header {
+	position: relative;
+	width: 100%;
+    background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 16px;
+    animation-name: hide;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-play-state: paused;
+}
+  
+#main-header a:hover {
+    border-radius: 0.5rem;
+    background-color: white;
+    color: black !important;
 }
 
-header {
-  background-color: black !important;
-  color: white !important;
-  text-align: center;
-  grid-area: hd;
-  animation-name: hide;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-  animation-play-state: paused;
-}
-
-header a:hover {
-  border-radius: 0.5em;
-  background-color: white;
-  color: black !important;
-}
+/* BODY */
 
 #body-container {
-    grid-area: main;
-    min-height: 90vh;
+	position: relative;
+	min-height: 90vh;
+	width: 100%;
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row;
-    font-family: Palatino !important;
-
 }
 
 .input-form {
-    background-color: #f8f9fa !important;
-    width: 18%;
-    height: 33vh;
-    margin: 7px;
+	background-color: #f8f9fa !important;
+	height: 33vh;
+	width: 19%;
+    margin: 5px 5px;
     padding: 13px;
-    overflow: hidden;
     border: 1px solid black;
 }
 
 .input-form textarea, textarea:focus {
-    border: none;
-    background-color: #f8f9fa !important;
+	border: none;
+	border-bottom: 2px solid black;
+	background-color: #f8f9fa !important;
+	color: black;
     outline: 0;
-    width: 90%;
+    width: 100%;
     height: 21vh;
-    border-bottom: 2px solid black;
-    resize: none;
+	resize: none;
+	font-size: 14px;
 }
 
-.note-grid, .note-grid:hover {
-  display: grid;
-  grid-template-columns: auto;
-  grid-template-rows: 13px auto 10px;
-  grid-template-areas: "btns"
-                       "para"
-                       "expand";
-  background-color: #343a40 !important;
-  font-size: 15px;
-  margin: 7px;
-  padding: 10px;
-  width: 18%;
-  height: 33vh;
-  position: relative;
-  overflow: hidden;
-} 
-
-
-/*
-
-.note-grid:hover {
-    font-size: 23px;
-    margin: 5px;
-    padding: 10px;
-    width: 25%;
-    height: auto;
-    overflow: visible;
-    z-index: 2;
+.note-box {
+	display: flex;
+	flex-direction: column;
+	background-color: #343a40 !important;
+	margin: 5px 5px;
+	width: 19%;
+	padding: 10px;
+	height: 33vh;
 }
 
-*/
-
-.note-grid p {
-  grid-area: para;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  border-top: 0.5px solid white !important;
-  padding-top: 3px;
-  color: rgb(255, 255, 255);
-  position: relative;
+.note-box .btn-group {
+	align-self: flex-end;
 }
 
-.btn-group {
-    grid-area: btns;
-    margin: -1vh 4vw 0vh 4vw;
+.btn-group a.btn {
+    font-size: 8px !important;
+	background-color: #343a40 !important;
+	color: white !important;
+    border: 0.7px solid white;
 }
 
-a.btn {
-    font-size: 10px !important;
-    padding: 0.3vh 0vw 2vh 0vw !important;
-    background-color: #343a40 !important;
-    border: 0.7px solid white !important;
-    color: white !important;
-}
-
-.btn-edit:hover, .btn-reply:hover, .btn-expand:hover {
+.btn-group .btn-edit:hover,
+.btn-group .btn-reply:hover, 
+.btn-group .btn-expand:hover {
   background-color: white !important;
   color: black !important;
   border: 1px solid black !important;
-
 }
 
-.btn-close:hover {
+.btn-group .btn-close:hover {
   background-color: red !important;
   color: black !important;
   border: 1px solid white !important;
 }
 
+.note-box p {
+	padding-top: 3px;
+	margin-bottom: 0;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	overflow: hidden;
+	border-top: 0.5px solid white !important;
+	color: rgb(255, 255, 255);
+	font-size: 14px;
+}
+  
+
+
+/* FOOTER */
+
 footer {
-  grid-area: ft;
-  position: relative;
-  left: 0;
-  bottom: 0 !important;
-  width: 100%;
-  padding: 20px 20px 20px 20px;
-  background-color: black !important;
-  color: white !important;
-  text-align: center;
-  font-size: 0.7em;
+	position: relative;
+	left: 0;
+	bottom: 0 !important;
+	width: 100%;
+	height: 10vh;
+	padding-top: 4vh;
+	background-color: black !important;
+	color: white !important;
+	text-align: center;
+	font-size: 10px;
+  }
+
+  footer i {
+	color: white;
 }
-
-footer i {
-  color: white;
-}
-
-
-/* for mobile phones */
-
-@media only screen and (max-width: 900px) {
-
-  #body-container {
-    min-height: 90vh !important;
-  }
-
-  footer {
-    height: 10vh;
-    padding-top: 30px;
-  }
-
-  .note-grid, .note-grid:hover, .input-form {
-    width: 29% !important;
-    height: 20vh !important;
-    margin: 5px;
-    padding: 7px;
-  }
-
-  .note-grid p {
-    top: -0.5vh;
-    font-size: 9px !important;
-  }
-
-  .input-form textarea, textarea:focus {
-    position: relative;
-    font-size: 11px !important;
-    height: 10vh !important;
-  } 
-
-  button.submit {
-    position: relative;
-    height: 1vh !important;
-    font-size: 10px !important;
-    clear: both;
-    margin-top: -1.5vh;
-    text-align: center;
-    padding: 0.5vh 2vw 3.0vh 2vw !important;
-  }
-
-  .btn-group {
-    margin: -0.7vh -0.5vw 0vh 65% !important;
-  }
-
-  a.btn {
-    padding: 0.3vh 0.5vw 1.0vh 0.5vw !important;    
-    font-size: 5px !important;
-    height: 1.5vh !important;
-    border: 0.4px solid lightgrey !important;
-  }
-}
+  

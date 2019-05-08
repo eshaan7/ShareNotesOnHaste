@@ -16,9 +16,9 @@
     <!-- Body -->
     <body>
     {% if message %}
-    	<header>
+    	<header id="main-header">
     		<i class="far fa-bell"> {{ message }}</i>
-    		<a class="fas fa-times-circle fa-sm" onclick="removeHeader(this);"></a>
+    		<a class="fas fa-times-circle fa-sm" role="button" onclick="removeHeader(this);"></a>
     	</header>
     {% endif %}
         <div id="body-container">
@@ -30,7 +30,7 @@
 	            </form>
         	</div>
         {% for n in notes %}
-            <div class="note-grid">
+            <div class="note-box">
             	<div class="btn-group btn-group-sm" role="group">
             		<a onclick="alert('expand: Coming soon');" class="btn btn-expand"><i class="fas fa-expand-arrows-alt"></i>
 					<a onclick="javascript:alert('Reply: Coming soon');" class="btn btn-reply"><i class="fas fa-reply"></i></a>
@@ -47,7 +47,7 @@
 			<!-- Footer Elements -->
 			<div id="footer-container">
 			    <!-- Twitter -->
-			    <a href="https://twitter.com/scriptnotsokid">
+			    <a href="https://twitter.com/mask0fmydisguis">
 			      <i class="fab fa-twitter fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 			    </a>
 			    <!-- Github -->
@@ -55,7 +55,7 @@
 			      <i class="fab fa-github fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 			    </a>
 			    <!--Linkedin -->
-			    <a href="https://www.linkedin.com/in/eshaan-bansal-6a8287164">
+			    <a href="https://www.linkedin.com/in/eshaan7">
 			      <i class="fab fa-linkedin-in fa-lg white-text mr-md-5 mr-3 fa-2x"> </i>
 			    </a>
 			    <!--Instagram-->
