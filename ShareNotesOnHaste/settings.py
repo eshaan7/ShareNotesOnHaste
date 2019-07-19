@@ -26,7 +26,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', "xj5t=pw&u^kb_uuyw=#1wv1h$=igl5
 # SECURITY WARNING: don't run with debug turned on in production!
 #DEBUG = True
 
-DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
+DEBUG = os.environ.get('DJANGO_DEBUG', 'False')  # != 'False'
 
 ALLOWED_HOSTS = ['sharenotesonhaste.herokuapp.com', '127.0.0.1']
 
