@@ -2,10 +2,9 @@
 
 ## New functions
 
-  1. make footer static i.e. not overlapping
-  2. add reply functionaity
-  3. add edit functionality
-  4. add expand func
+  1. add reply functionaity
+  2. add edit functionality
+  3. add expand func
 
 ## Install
 
